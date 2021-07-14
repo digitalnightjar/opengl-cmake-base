@@ -9,7 +9,8 @@ add_executable(${PROJECT_NAME} src/main.cpp)
 target_include_directories(${PROJECT_NAME} PRIVATE ${GAME_INCLUDE_DIR})
 
 # Tell CMake we want backbone to link against GLFW
-target_link_libraries(${PROJECT_NAME} "glfw3" "${GLFW_LIBRARIES}")
+#target_link_libraries(${PROJECT_NAME} "glfw3" "${GLFW_LIBRARIES}")
+target_link_libraries(${PROJECT_NAME} glfw)
 target_include_directories(${PROJECT_NAME} PRIVATE "${GLFW_DIR}/include")
 target_compile_definitions(${PROJECT_NAME} PRIVATE "GLFW_INCLUDE_NONE")
 
