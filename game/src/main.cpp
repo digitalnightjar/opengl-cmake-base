@@ -191,7 +191,7 @@ int main()
 
         float timeValue = glfwGetTime();
         float greenValue = (glm::sin(timeValue) / 2.0f) + 0.5f;
-        int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
+        int vertexColorLocation = glGetUniformLocation(shaderProgram, "uniColor");
         glUseProgram(shaderProgram);
         glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
         // draw our first triangle
