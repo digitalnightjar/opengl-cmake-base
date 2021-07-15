@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libs")
 set(GLFW_DIR "${LIB_DIR}/glfw3")
 set(GLAD_DIR "${LIB_DIR}/glad")
+set(GLM_DIR "${LIB_DIR}/glm")
 
 # Disable some things from the GLFW CMake system (Example/Test Programs etc.)
 set(GLFW_BUILD_EXAMPLES OFF CACHE INTERNAL "Build the GLFW example programs")
@@ -21,5 +22,9 @@ target_include_directories("glad" PRIVATE "${GLAD_DIR}/include")
 add_subdirectory("${GLFW_DIR}")
 
 include_directories(libs/glfw/include)
+
+# GLM
+include_directories("${GLM_DIR}/glm")
+
 # Add the Engine
 add_subdirectory("game")

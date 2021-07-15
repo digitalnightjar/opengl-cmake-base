@@ -19,6 +19,9 @@ include_directories("${GLFW_DIR}/include")
 target_include_directories(${PROJECT_NAME} PRIVATE "${GLAD_DIR}/include")
 target_link_libraries(${PROJECT_NAME} "glad" "${CMAKE_DL_LIBS}")
 
+target_include_directories(${PROJECT_NAME} PRIVATE "${GLM_DIR}/glm")
+
+
 # CPack Installation Info
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
