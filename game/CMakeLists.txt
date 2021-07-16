@@ -5,8 +5,9 @@ set(GAME_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include")
 include_directories(GAME_INCLUDE_DIR)
 
 
-add_executable(${PROJECT_NAME} src/main.cpp)
+add_executable(${PROJECT_NAME} src/main.cpp src/shader.cpp include/shader.hpp)
 target_include_directories(${PROJECT_NAME} PRIVATE ${GAME_INCLUDE_DIR})
+target_include_directories(${PROJECT_NAME} PRIVATE "${GAME_INCLUDE_DIR}")
 
 # Tell CMake we want backbone to link against GLFW
 #target_link_libraries(${PROJECT_NAME} "glfw3" "${GLFW_LIBRARIES}")
@@ -20,6 +21,8 @@ target_include_directories(${PROJECT_NAME} PRIVATE "${GLAD_DIR}/include")
 target_link_libraries(${PROJECT_NAME} "glad" "${CMAKE_DL_LIBS}")
 
 target_include_directories(${PROJECT_NAME} PRIVATE "${GLM_DIR}/glm")
+
+
 
 
 # CPack Installation Info
