@@ -21,6 +21,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE "${GLAD_DIR}/include")
 target_link_libraries(${PROJECT_NAME} "glad" "${CMAKE_DL_LIBS}")
 
 target_include_directories(${PROJECT_NAME} PRIVATE "${GLM_DIR}/glm")
+target_include_directories(${PROJECT_NAME} PRIVATE "${STB_DIR}")
 
 
 
